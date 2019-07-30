@@ -3,8 +3,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { AppLoading } from "expo";
 import * as Font from "expo-font";
 import { Asset } from "expo-asset";
-import { Text, View } from "react-native";
-import AsyncStorage from "@react-native-community/async-storage";
+import { Text, View, AsyncStorage } from "react-native";
 import { InMemoryCache } from "apollo-cache-inmemory";
 import { persistCache } from "apollo-cache-persist";
 import ApolloClient from "apollo-boost";
@@ -48,7 +47,7 @@ export default function App() {
     </ApolloProvider>
   ) : (
     <>
-      로드중입니다.
+      <Text>로드중입니다.</Text>
       <AppLoading />
     </>
   );
